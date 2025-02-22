@@ -16,7 +16,7 @@ This project applies **Autoencoders & K-Means Clustering** on genomic datasets f
 
 ## 📊 **Visualization**
 ### 🧬 PCA-Based Cluster Plot:
-![Clustering Visualization](https://github.com/bhavana-1011/Advanced-EDA-for-Genomic-Data-Analysis/blob/main/clustering_visualization.png)
+###### ![Clustering Visualization](https://github.com/bhavana-1011/Advanced-EDA-for-Genomic-Data-Analysis/blob/main/clustering_visualization.png)
 
 ---
 
