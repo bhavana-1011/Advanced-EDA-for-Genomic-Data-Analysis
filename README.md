@@ -11,6 +11,10 @@ This project applies **Autoencoders & K-Means Clustering** on genomic datasets f
 ✅ **Visualization with PCA & Seaborn**  
 ✅ **Model evaluation with Silhouette Score & Davies-Bouldin Index**  
 
+## 📊 **Flask App**
+![image_alt]()
+
+
 
 ---
 
