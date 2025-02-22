@@ -21,16 +21,16 @@ This project applies **Autoencoders & K-Means Clustering** on genomic datasets f
 ---
 
 ## 🔥 **How to Run the Project**
-### 1️⃣ Install Dependencies:
+1️⃣ Install Dependencies:
 ```sh
 pip install -r requirements.txt
 
-### 2️⃣ Train the Autoencoder & K-Means:
+2️⃣ Train the Autoencoder & K-Means:
 ```sh
 python src/model_training.py  
 python src/clustering.py  
 
-### 3️⃣ Start Flask Web App:
+3️⃣ Start Flask Web App:
 ```sh
 python app.py  
 
