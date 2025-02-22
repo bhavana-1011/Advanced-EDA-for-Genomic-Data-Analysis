@@ -1,0 +1,15 @@
+# Ignore data files
+data/
+
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+
+# Ignore virtual environment
+venv/
+
+# Ignore logs and outputs
+logs/
+outputs/
+
+notebooks/

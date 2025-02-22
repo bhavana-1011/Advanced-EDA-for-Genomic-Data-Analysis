@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genomic Data Clustering</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Genomic Data Clustering</h1>
+        <p>Enter genomic feature values (comma-separated):</p>
+        
+        <label for="position">Position:</label>
+        <input type="number" id="position" step="any" placeholder="e.g., 123456">
+        
+        <label for="quality">Quality:</label>
+        <input type="number" id="quality" step="any" placeholder="e.g., 50">
+        
+        <label for="depth">Depth:</label>
+        <input type="number" id="depth" step="any" placeholder="e.g., 200">
+        
+        <label for="alt_encoded">Alt Encoded:</label>
+        <input type="number" id="alt_encoded" step="any" placeholder="e.g., 3">
+        
+        <button onclick="sendData()">Predict Cluster</button>
+        
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function sendData() {
+            let position = parseFloat(document.getElementById("position").value);
+            let quality = parseFloat(document.getElementById("quality").value);
+            let depth = parseFloat(document.getElementById("depth").value);
+            let alt_encoded = parseFloat(document.getElementById("alt_encoded").value);
+
+            let features = [position, quality, depth, alt_encoded];
+
+            fetch("/predict", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ "features": features })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    document.getElementById("output").innerText = "Error: " + data.error;
+                    document.getElementById("output").style.color = "red";
+                } else {
+                    document.getElementById("output").innerText = "Predicted Cluster: " + data.Cluster;
+                    document.getElementById("output").style.color = "green";
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html>
