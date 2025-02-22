@@ -11,8 +11,8 @@ This project applies **Autoencoders & K-Means Clustering** on genomic datasets f
 ✅ **Visualization with PCA & Seaborn**  
 ✅ **Model evaluation with Silhouette Score & Davies-Bouldin Index**  
 
-## 📊 **Flask App**
-![image_alt]()
+## 📊 **Flask App For Genom Analysis**
+###### ![image_alt](https://github.com/bhavana-1011/Advanced-EDA-for-Genomic-Data-Analysis/blob/main/UI-for-genom-analysis.png)
 
 
 
